@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 2rem; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #333; }
+        .result { margin: 2rem 0; }
+        .status { font-size: 2.5rem; font-weight: bold; }
+        .status.churn { color: #dc3545; }
+        .status.not-churn { color: #28a745; }
+        .probability { font-size: 1.2rem; color: #555; margin-top: 0.5rem; }
+        a { display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; transition: background-color 0.2s; }
+        a:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result">
+            <p class="status {{ 'churn' if status == 'CHURN' else 'not-churn' }}">
+                Customer will {{ status }}
+            </p>
+            <p class="probability">
+                Probability of Churn: <strong>{{ probability }}</strong>
+            </p>
+        </div>
+        <a href="/">Make Another Prediction</a>
+    </div>
+</body>
+</html>
