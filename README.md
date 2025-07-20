@@ -1,6 +1,6 @@
 # Customer Churn Prediction Project
 
-## 📌 Project Goal
+## Project Goal
 
 The primary goal of this project is to build and deploy a machine learning model that accurately predicts customer churn for a fictional subscription-based telecommunications company.
 
